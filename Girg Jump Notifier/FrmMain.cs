@@ -92,6 +92,17 @@ namespace Girg_Jump_Notifier
                     }
                 }
             }
+            else if (p.Op == 0x6D62)     // UseMotion
+            {
+                var category = p.GetInt();
+                var type = p.GetInt();
+                var loop = p.GetByte();
+                var zero = p.GetShort();
+                if (category == 161 && type == 0)
+                {
+                    Shield();
+                }
+            }
             /*
              * if needed, get girg entity id from EntityAppears
              * girg race: solo = 3073

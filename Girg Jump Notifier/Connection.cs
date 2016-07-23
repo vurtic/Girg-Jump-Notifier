@@ -18,13 +18,12 @@ namespace Girg_Jump_Notifier
         }
 
         public void Connect()
-        {
-
+        { 
             var alissaWindows = WinApi.FindAllWindows("mod_Alissa");
 
             if (alissaWindows.Count == 0)
             {
-                //MainFrm.Log("No packet provider found.");
+
                 return;
             }
 
