@@ -1,0 +1,9 @@
+c:\users\justin\documents\visual studio 2015\Projects\Girg Jump Notifier\Girg Jump Notifier\bin\Release\Girg Jump Notifier.exe.config
+c:\users\justin\documents\visual studio 2015\Projects\Girg Jump Notifier\Girg Jump Notifier\bin\Release\Girg Jump Notifier.exe
+c:\users\justin\documents\visual studio 2015\Projects\Girg Jump Notifier\Girg Jump Notifier\bin\Release\Girg Jump Notifier.pdb
+c:\users\justin\documents\visual studio 2015\Projects\Girg Jump Notifier\Girg Jump Notifier\obj\Release\Girg Jump Notifier.csprojResolveAssemblyReference.cache
+c:\users\justin\documents\visual studio 2015\Projects\Girg Jump Notifier\Girg Jump Notifier\obj\Release\Girg_Jump_Notifier.FrmMain.resources
+c:\users\justin\documents\visual studio 2015\Projects\Girg Jump Notifier\Girg Jump Notifier\obj\Release\Girg_Jump_Notifier.Properties.Resources.resources
+c:\users\justin\documents\visual studio 2015\Projects\Girg Jump Notifier\Girg Jump Notifier\obj\Release\Girg Jump Notifier.csproj.GenerateResource.Cache
+c:\users\justin\documents\visual studio 2015\Projects\Girg Jump Notifier\Girg Jump Notifier\obj\Release\Girg Jump Notifier.exe
+c:\users\justin\documents\visual studio 2015\Projects\Girg Jump Notifier\Girg Jump Notifier\obj\Release\Girg Jump Notifier.pdb
