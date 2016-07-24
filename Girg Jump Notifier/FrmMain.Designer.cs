@@ -29,15 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMain));
             this.btnConnect = new System.Windows.Forms.Button();
             this.btnDisconnect = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.chkTop = new System.Windows.Forms.CheckBox();
             this.sptLabels = new System.Windows.Forms.SplitContainer();
             this.lblJump = new System.Windows.Forms.Label();
+            this.lblShield = new System.Windows.Forms.Label();
             this.pnlControls = new System.Windows.Forms.Panel();
             this.pnlControlsWrapper = new System.Windows.Forms.Panel();
-            this.lblShield = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.sptLabels)).BeginInit();
             this.sptLabels.Panel1.SuspendLayout();
             this.sptLabels.Panel2.SuspendLayout();
@@ -100,7 +101,7 @@
             // 
             this.sptLabels.Panel2.Controls.Add(this.lblShield);
             this.sptLabels.Size = new System.Drawing.Size(282, 124);
-            this.sptLabels.SplitterDistance = 60;
+            this.sptLabels.SplitterDistance = 59;
             this.sptLabels.TabIndex = 4;
             // 
             // lblJump
@@ -112,9 +113,22 @@
             this.lblJump.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblJump.Location = new System.Drawing.Point(3, 0);
             this.lblJump.Name = "lblJump";
-            this.lblJump.Size = new System.Drawing.Size(276, 60);
+            this.lblJump.Size = new System.Drawing.Size(276, 59);
             this.lblJump.TabIndex = 0;
             this.lblJump.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lblShield
+            // 
+            this.lblShield.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblShield.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblShield.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblShield.Location = new System.Drawing.Point(3, 0);
+            this.lblShield.Name = "lblShield";
+            this.lblShield.Size = new System.Drawing.Size(276, 61);
+            this.lblShield.TabIndex = 1;
+            this.lblShield.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // pnlControls
             // 
@@ -137,19 +151,6 @@
             this.pnlControlsWrapper.Size = new System.Drawing.Size(282, 23);
             this.pnlControlsWrapper.TabIndex = 9;
             // 
-            // lblShield
-            // 
-            this.lblShield.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblShield.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lblShield.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblShield.Location = new System.Drawing.Point(3, 0);
-            this.lblShield.Name = "lblShield";
-            this.lblShield.Size = new System.Drawing.Size(276, 60);
-            this.lblShield.TabIndex = 1;
-            this.lblShield.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // FrmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -157,6 +158,7 @@
             this.ClientSize = new System.Drawing.Size(308, 179);
             this.Controls.Add(this.pnlControlsWrapper);
             this.Controls.Add(this.sptLabels);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmMain";

@@ -1,6 +1,6 @@
-# Girg-Jump-Notifier
+# Girg Jump Notifier
 
-This application will help players during Girgashiy raids. A message will be displayed whenever Girgashiy begins to jump, and a counter of the number of Shield of Trust skills have been used. The Girgashiy and other players who are using Shield of Trust must be loaded (in range) for the program to identify that those actions have occured. A packet proxy must be used ([Morrighan](http://aura-project.org/forum/topic/40-morrighan-client-proxy-updated-2015-12-13-v156/)).
+This application will help players during Girgashiy raids. A message will be displayed whenever Girgashiy begins to jump, and a counter will keep track of the number of Shield of Trust skills that have been used. The Girgashiy and other players who are using Shield of Trust must be loaded (in range of the player) for the program to identify that the actions have occured. A packet proxy must be used ([Morrighan](http://aura-project.org/forum/topic/40-morrighan-client-proxy-updated-2015-12-13-v156/)).
 
 ## Usage
 1. Load Mabi while using Morrighan.
