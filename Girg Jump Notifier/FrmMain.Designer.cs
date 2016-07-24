@@ -101,32 +101,28 @@
             // 
             this.sptLabels.Panel2.Controls.Add(this.lblShield);
             this.sptLabels.Size = new System.Drawing.Size(282, 124);
-            this.sptLabels.SplitterDistance = 59;
+            this.sptLabels.SplitterDistance = 60;
             this.sptLabels.TabIndex = 4;
             // 
             // lblJump
             // 
-            this.lblJump.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblJump.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblJump.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblJump.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblJump.Location = new System.Drawing.Point(3, 0);
+            this.lblJump.Location = new System.Drawing.Point(0, 0);
             this.lblJump.Name = "lblJump";
-            this.lblJump.Size = new System.Drawing.Size(276, 59);
+            this.lblJump.Size = new System.Drawing.Size(282, 60);
             this.lblJump.TabIndex = 0;
             this.lblJump.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblShield
             // 
-            this.lblShield.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.lblShield.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblShield.Dock = System.Windows.Forms.DockStyle.Fill;
             this.lblShield.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblShield.Location = new System.Drawing.Point(3, 0);
+            this.lblShield.Location = new System.Drawing.Point(0, 0);
             this.lblShield.Name = "lblShield";
-            this.lblShield.Size = new System.Drawing.Size(276, 61);
+            this.lblShield.Size = new System.Drawing.Size(282, 60);
             this.lblShield.TabIndex = 1;
             this.lblShield.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 

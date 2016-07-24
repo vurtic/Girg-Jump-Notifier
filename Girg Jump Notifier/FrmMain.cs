@@ -75,30 +75,17 @@ namespace Girg_Jump_Notifier
 
         private void HandlePacket(Packet p)
         {
-            if(p.Op == 0xA41E)     // SharpMind
-            {
-                var entityId = p.GetLong();
-                p.GetByte();
-                p.GetByte();
-                // if the next element is an int, sharp mind from girg
-                // otherwise a regular sharp mind will be short then int
-                if(p.NextIs(PacketElementType.Int))
-                {
-                    var girgAction = p.GetInt();
-                    if (girgAction == 1)
-                    {
-                        // girg jump
-                        Jump();
-                    }
-                }
-            }
-            else if (p.Op == 0x6D62)     // UseMotion
+            if (p.Op == 0x6D62)     // UseMotion
             {
                 var category = p.GetInt();
                 var type = p.GetInt();
                 var loop = p.GetByte();
                 var zero = p.GetShort();
-                if (category == 161 && type == 0)
+                if (category == 162 && type == 8)
+                {
+                    Jump();
+                }
+                else if (category == 161 && type == 0)
                 {
                     Shield();
                 }
@@ -111,10 +98,6 @@ namespace Girg_Jump_Notifier
              *            hard = 3006
              *            very hard = 3069
              * 
-             * jump can also be identified by UseMotion
-             * category == 162
-             * type == 8
-             * 
             else if (p.Op == 0x520C)     // EntityAppears
             {
                 var entityId = p.GetLong();
@@ -124,23 +107,12 @@ namespace Girg_Jump_Notifier
                 p.GetString();
                 var race = p.GetInt();
             }
-            else if (p.Op == 0x6D62)    // UseMotion
-            {
-                var category = p.GetInt();
-                var type = p.GetInt();
-                var loop = p.GetByte();
-                var zero = p.GetShort();
-                if (category == 162 && type == 8)
-                {
-                    // girg jump
-                }
-            }
             */
         }
 
         private void Jump()
         {
-            lblJump.Text = "Girgashiy Hail";
+            lblJump.Text = "Mineral Hail";
             lblJump.BackColor = Color.YellowGreen;
             var jumpTimer = new Timer();
             jumpTimer.Interval = 10000;
@@ -161,6 +133,7 @@ namespace Girg_Jump_Notifier
             {
                 _shieldTimer.Interval += 1000;
                 _shieldCounter++;
+                lblShield.Text = String.Format("{0} Shields", _shieldCounter);
             }
             else
             {
@@ -171,8 +144,8 @@ namespace Girg_Jump_Notifier
                 _isTimerActive = true;
                 _shieldCounter = 1;
                 lblShield.BackColor = Color.LightSkyBlue;
+                lblShield.Text = "1 Shield";
             }
-            lblShield.Text = String.Format("{0} Shields", _shieldCounter);
         }
 
         private void ResetShield(object sender, EventArgs e)
