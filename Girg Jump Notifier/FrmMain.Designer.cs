@@ -35,6 +35,7 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.chkTop = new System.Windows.Forms.CheckBox();
             this.sptLabels = new System.Windows.Forms.SplitContainer();
+            this.picTimer = new System.Windows.Forms.PictureBox();
             this.lblJump = new System.Windows.Forms.Label();
             this.lblShield = new System.Windows.Forms.Label();
             this.pnlControlsWrapper = new System.Windows.Forms.Panel();
@@ -42,13 +43,14 @@
             this.sptLabels.Panel1.SuspendLayout();
             this.sptLabels.Panel2.SuspendLayout();
             this.sptLabels.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.picTimer)).BeginInit();
             this.pnlControlsWrapper.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnConnect
             // 
             this.btnConnect.Location = new System.Drawing.Point(3, 1);
-            this.btnConnect.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnConnect.Margin = new System.Windows.Forms.Padding(2);
             this.btnConnect.Name = "btnConnect";
             this.btnConnect.Size = new System.Drawing.Size(70, 19);
             this.btnConnect.TabIndex = 1;
@@ -59,7 +61,7 @@
             // btnDisconnect
             // 
             this.btnDisconnect.Location = new System.Drawing.Point(81, 1);
-            this.btnDisconnect.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDisconnect.Margin = new System.Windows.Forms.Padding(2);
             this.btnDisconnect.Name = "btnDisconnect";
             this.btnDisconnect.Size = new System.Drawing.Size(70, 19);
             this.btnDisconnect.TabIndex = 2;
@@ -77,7 +79,7 @@
             // 
             this.chkTop.AutoSize = true;
             this.chkTop.Location = new System.Drawing.Point(161, 3);
-            this.chkTop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.chkTop.Margin = new System.Windows.Forms.Padding(2);
             this.chkTop.Name = "chkTop";
             this.chkTop.Size = new System.Drawing.Size(62, 17);
             this.chkTop.TabIndex = 3;
@@ -91,12 +93,13 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.sptLabels.Location = new System.Drawing.Point(9, 33);
-            this.sptLabels.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sptLabels.Margin = new System.Windows.Forms.Padding(2);
             this.sptLabels.Name = "sptLabels";
             this.sptLabels.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
             // sptLabels.Panel1
             // 
+            this.sptLabels.Panel1.Controls.Add(this.picTimer);
             this.sptLabels.Panel1.Controls.Add(this.lblJump);
             // 
             // sptLabels.Panel2
@@ -106,6 +109,16 @@
             this.sptLabels.SplitterDistance = 48;
             this.sptLabels.SplitterWidth = 3;
             this.sptLabels.TabIndex = 4;
+            // 
+            // picTimer
+            // 
+            this.picTimer.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.picTimer.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.picTimer.Location = new System.Drawing.Point(0, 0);
+            this.picTimer.Name = "picTimer";
+            this.picTimer.Size = new System.Drawing.Size(231, 48);
+            this.picTimer.TabIndex = 10;
+            this.picTimer.TabStop = false;
             // 
             // lblJump
             // 
@@ -138,7 +151,7 @@
             this.pnlControlsWrapper.Controls.Add(this.btnConnect);
             this.pnlControlsWrapper.Controls.Add(this.btnDisconnect);
             this.pnlControlsWrapper.Location = new System.Drawing.Point(9, 10);
-            this.pnlControlsWrapper.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pnlControlsWrapper.Margin = new System.Windows.Forms.Padding(2);
             this.pnlControlsWrapper.Name = "pnlControlsWrapper";
             this.pnlControlsWrapper.Size = new System.Drawing.Size(231, 19);
             this.pnlControlsWrapper.TabIndex = 9;
@@ -151,7 +164,7 @@
             this.Controls.Add(this.pnlControlsWrapper);
             this.Controls.Add(this.sptLabels);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FrmMain";
@@ -161,6 +174,7 @@
             this.sptLabels.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.sptLabels)).EndInit();
             this.sptLabels.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.picTimer)).EndInit();
             this.pnlControlsWrapper.ResumeLayout(false);
             this.pnlControlsWrapper.PerformLayout();
             this.ResumeLayout(false);
@@ -176,6 +190,7 @@
         private System.Windows.Forms.Panel pnlControlsWrapper;
         private System.Windows.Forms.Label lblJump;
         private System.Windows.Forms.Label lblShield;
+        private System.Windows.Forms.PictureBox picTimer;
     }
 }
 

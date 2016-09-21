@@ -16,8 +16,13 @@ namespace Girg_Jump_Notifier
 
         private Connection _Connection;
         private Timer _shieldTimer;
+        private Timer _nextTimer;
+        private int _nextCounter;
         private bool _isTimerActive;
         private int _shieldCounter;
+        private Rectangle _rect;
+        private const int _padding = 6;
+        private SolidBrush _nextColor;
 
         public FrmMain()
         {
@@ -28,6 +33,14 @@ namespace Girg_Jump_Notifier
         {
             _Connection = new Connection(this.Handle);
             btnConnect.Select();
+            picTimer.Paint += new PaintEventHandler(picTimerPaint);
+            picTimer.Resize += new EventHandler(picTimerResize);
+            picTimer.Visible = false;
+            _nextTimer = new Timer();
+            _nextTimer.Tick += new EventHandler(RedrawPie);
+            _nextTimer.Interval = 100;
+            _rect = calcRect();
+            _nextColor = new SolidBrush(Color.Crimson);
         }
 
         private void btnConnect_Click(object sender, EventArgs e)
@@ -118,6 +131,9 @@ namespace Girg_Jump_Notifier
             jumpTimer.Interval = 10000;
             jumpTimer.Tick += new EventHandler(ResetJump);
             jumpTimer.Start();
+            _nextCounter = 0;
+            _nextTimer.Start();
+            picTimer.Visible = false;
         }
 
         private void ResetJump(object sender, EventArgs e)
@@ -125,6 +141,7 @@ namespace Girg_Jump_Notifier
             ((Timer)sender).Stop();
             lblJump.Text = "";
             lblJump.BackColor = Color.White;
+            picTimer.Visible = true;
         }
 
         private void Shield()
@@ -154,6 +171,44 @@ namespace Girg_Jump_Notifier
             _isTimerActive = false;
             lblShield.Text = "";
             lblShield.BackColor = Color.White;
+        }
+
+        private void RedrawPie(object sender, EventArgs e)
+        {
+            _nextCounter += 1;
+            picTimer.Invalidate();
+            if (_nextCounter >= 400)
+            {
+                _nextTimer.Stop();
+            }
+        }
+
+        private void picTimerPaint(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            var p = (float)((_nextCounter / 400.0) * 360.0);
+            g.FillPie(_nextColor, _rect, -90f, p);
+        }
+
+        private void picTimerResize(object sender, EventArgs e)
+        {
+            _rect = calcRect();
+        }
+
+        private Rectangle calcRect()
+        {
+            var w = picTimer.Width - _padding * 2;
+            var h = picTimer.Height - _padding * 2;
+            if (w > h)
+            {
+                var p = (w - h) / 2;
+                return new Rectangle(p, picTimer.Top + _padding, h, h);
+            }
+            else
+            {
+                var p = (h - w) / 2;
+                return new Rectangle(picTimer.Left + _padding, p, w, w);
+            }
         }
 
     }
