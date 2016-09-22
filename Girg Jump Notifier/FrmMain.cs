@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +24,7 @@ namespace Girg_Jump_Notifier
         private Rectangle _rect;
         private const int _padding = 6;
         private SolidBrush _nextColor;
+        private SoundPlayer _beep;
 
         public FrmMain()
         {
@@ -41,6 +43,7 @@ namespace Girg_Jump_Notifier
             _nextTimer.Interval = 100;
             _rect = calcRect();
             _nextColor = new SolidBrush(Color.Crimson);
+            _beep = new SoundPlayer("beep.wav");
         }
 
         private void btnConnect_Click(object sender, EventArgs e)
@@ -134,13 +137,14 @@ namespace Girg_Jump_Notifier
             _nextCounter = 0;
             _nextTimer.Start();
             picTimer.Visible = false;
+            _beep.Play();
         }
 
         private void ResetJump(object sender, EventArgs e)
         {
             ((Timer)sender).Stop();
             lblJump.Text = "";
-            lblJump.BackColor = Color.White;
+            lblJump.BackColor = Color.Empty;
             picTimer.Visible = true;
         }
 
@@ -170,7 +174,7 @@ namespace Girg_Jump_Notifier
             ((Timer)sender).Stop();
             _isTimerActive = false;
             lblShield.Text = "";
-            lblShield.BackColor = Color.White;
+            lblShield.BackColor = Color.Empty;
         }
 
         private void RedrawPie(object sender, EventArgs e)
@@ -186,6 +190,7 @@ namespace Girg_Jump_Notifier
         private void picTimerPaint(object sender, PaintEventArgs e)
         {
             Graphics g = e.Graphics;
+            g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
             var p = (float)((_nextCounter / 400.0) * 360.0);
             g.FillPie(_nextColor, _rect, -90f, p);
         }
