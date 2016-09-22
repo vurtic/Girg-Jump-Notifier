@@ -43,7 +43,8 @@ namespace Girg_Jump_Notifier
             _nextTimer.Interval = 100;
             _rect = calcRect();
             _nextColor = new SolidBrush(Color.Crimson);
-            _beep = new SoundPlayer("beep.wav");
+            var assembly = System.Reflection.Assembly.GetExecutingAssembly();
+            _beep = new SoundPlayer(assembly.GetManifestResourceStream("Girg_Jump_Notifier.beep.wav"));
         }
 
         private void btnConnect_Click(object sender, EventArgs e)

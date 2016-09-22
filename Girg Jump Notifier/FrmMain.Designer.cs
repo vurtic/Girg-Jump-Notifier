@@ -92,7 +92,7 @@
             this.sptLabels.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.sptLabels.Location = new System.Drawing.Point(9, 33);
+            this.sptLabels.Location = new System.Drawing.Point(9, 31);
             this.sptLabels.Margin = new System.Windows.Forms.Padding(2);
             this.sptLabels.Name = "sptLabels";
             this.sptLabels.Orientation = System.Windows.Forms.Orientation.Horizontal;
@@ -150,7 +150,7 @@
             this.pnlControlsWrapper.Controls.Add(this.chkTop);
             this.pnlControlsWrapper.Controls.Add(this.btnConnect);
             this.pnlControlsWrapper.Controls.Add(this.btnDisconnect);
-            this.pnlControlsWrapper.Location = new System.Drawing.Point(9, 10);
+            this.pnlControlsWrapper.Location = new System.Drawing.Point(9, 6);
             this.pnlControlsWrapper.Margin = new System.Windows.Forms.Padding(2);
             this.pnlControlsWrapper.Name = "pnlControlsWrapper";
             this.pnlControlsWrapper.Size = new System.Drawing.Size(231, 19);
